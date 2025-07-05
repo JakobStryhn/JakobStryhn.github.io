@@ -14,20 +14,11 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
-
 jobs:
   deploy:
     permissions:
       contents: write
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       #Code Checkout
       - name: Checkout
@@ -37,7 +28,12 @@ jobs:
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 9.0.x
-
+     
+     # Install NPM dependencies
+      - name: Install NPM dependencies
+        working-directory: ./ProcGenFun.Blazor
+        run: npm i
+        
       # Compile Tailwindcss
       - name: Compile Tailwindcss
         working-directory: ./ResumeApp/
