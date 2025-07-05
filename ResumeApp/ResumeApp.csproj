@@ -14,9 +14,4 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="9.0.5" PrivateAssets="all" />
     <PackageReference Include="PublishSPAforGitHubPages.Build" Version="3.0.0" />
   </ItemGroup>
-
-	<Target Name="StaticWebAssets" AfterTargets="Publish">
-		<Exec Command="dotnet msbuild /t:GenerateStaticWebAssets /p:Configuration=$(Configuration)" />
-	</Target>
-	
 </Project>
