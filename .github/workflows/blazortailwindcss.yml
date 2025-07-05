@@ -38,6 +38,10 @@ jobs:
       - name: Compile Tailwindcss
         working-directory: ./ResumeApp/
         run: npx @tailwindcss/cli -i ./Styles/input.css -o ./wwwroot/tailwind.css
+      
+        # DotNet Restore to enforce nuget package dependencies
+      - name: DotNet Restore
+        run: dotnet restore
 
       - name: Publish Blazor app
         run: dotnet publish ./ResumeApp/ResumeApp.csproj -c Release -o release --nologo
