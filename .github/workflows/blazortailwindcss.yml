@@ -1,11 +1,11 @@
 name: Deploy to GitHub Pages
 
 on:
-  # Runs on pushes targeting the default branch
+  # Triggers on pushes to Main branch
   push:
     branches: ["main"]
 
-  # Allows you to run this workflow manually from the Actions tab
+  # Allows triggering of manual action run
   workflow_dispatch:
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
@@ -20,16 +20,18 @@ jobs:
       contents: write
     runs-on: ubuntu-latest
     steps:
+
       #Code Checkout
       - name: Checkout
         uses: actions/checkout@v4
+
       # Install .Net SDK
       - name: Setup .NET SDK
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: 9.0.x
      
-     # Install NPM dependencies
+     # Install NPM dependencies (Tailwind)
       - name: Install NPM dependencies
         working-directory: ./ResumeApp
         run: npm i
@@ -38,10 +40,6 @@ jobs:
       - name: Compile Tailwindcss
         working-directory: ./ResumeApp/
         run: npx @tailwindcss/cli -i ./Styles/input.css -o ./wwwroot/tailwind.css
-      
-      # Install Wasm Tools
-      - name: Install .NET WASM Tools Workload
-        run: dotnet workload install wasm-tools
 
       # DotNet Restore to enforce nuget package dependencies
       - name: DotNet Restore
