@@ -36,14 +36,17 @@ jobs:
         
       # Compile Tailwindcss
       - name: Compile Tailwindcss
-        working-directory: ./ResumeApp
-        run: npx @tailwindcss/cli -i ./Styles/input.css -o ./wwwroot/tailwind.css
+        working-directory: ./ResumeApp/
+        run: npx tailwindcss -i ./Styles/tailwindcss - o ./wwwroot/css/tailwindcss
 
-      # Deploy the site
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Publish Blazor app
+        run: dotnet publish ResumeApp.csproj -c Release -o release --nologo
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4 # Action specifically designed for deploying to GitHub Pages
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: publish/wwwroot
-          force_orphan: true
-          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }} # GitHub Token automatically provided
+          publish_dir: ./release/wwwroot # The directory containing your published Blazor app's static files
+          publish_branch: gh-pages # The branch where GitHub Pages will serve from (will be created if it doesn't exist)
+          force_orphan: true # Forces the gh-pages branch to be re-created from scratch on each deploy
+
