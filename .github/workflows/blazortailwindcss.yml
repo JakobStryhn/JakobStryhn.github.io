@@ -39,7 +39,11 @@ jobs:
         working-directory: ./ResumeApp/
         run: npx @tailwindcss/cli -i ./Styles/input.css -o ./wwwroot/tailwind.css
       
-        # DotNet Restore to enforce nuget package dependencies
+      # Install Wasm Tools
+      - name: Install .NET WASM Tools Workload
+        run: dotnet workload install wasm-tools
+
+      # DotNet Restore to enforce nuget package dependencies
       - name: DotNet Restore
         run: dotnet restore
         working-directory: ./ResumeApp
