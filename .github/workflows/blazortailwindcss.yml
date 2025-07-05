@@ -31,7 +31,7 @@ jobs:
      
      # Install NPM dependencies
       - name: Install NPM dependencies
-        working-directory: ./ProcGenFun.Blazor
+        working-directory: ./ResumeApp
         run: npm i
         
       # Compile Tailwindcss
