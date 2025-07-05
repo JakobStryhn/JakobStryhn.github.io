@@ -40,7 +40,7 @@ jobs:
         run: npx @tailwindcss/cli -i ./Styles/input.css -o ./wwwroot/tailwind.css
 
       - name: Publish Blazor app
-        run: dotnet publish ./ResumeApp.csproj -c Release -o release --nologo
+        run: dotnet publish ./ResumeApp/ResumeApp.csproj -c Release -o release --nologo
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4 # Action specifically designed for deploying to GitHub Pages
