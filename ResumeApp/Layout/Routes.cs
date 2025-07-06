@@ -16,43 +16,7 @@
             {
                 MaterialIcon = "Cottage",
                 SubPath = "",
-                LocalizationNamePath = "Home"
-            },
-            new Route
-            {
-                MaterialIcon = "Assignment",
-                SubPath = "resume",
-                LocalizationNamePath = "Resume"
-            },
-            new Route
-            {
-                MaterialIcon = "Code",
-                SubPath = "projects",
-                LocalizationNamePath = "Projects"
-            },
-            new Route
-            {
-                MaterialIcon = "Developer_Board",
-                SubPath = "components",
-                LocalizationNamePath = "ComponentLibrary"
-            },
-            new Route
-            {
-                MaterialIcon = "Playground",
-                SubPath = "playground",
-                LocalizationNamePath = "Playground"
-            },
-            new Route
-            {
-                MaterialIcon = "Grocery",
-                SubPath = "kombucha",
-                LocalizationNamePath = "Kombucha"
-            },
-            new Route
-            {
-                MaterialIcon = "Breakfast_Dining",
-                SubPath = "baking",
-                LocalizationNamePath = "Baking"
+                LocalizationNamePath = "NavLink_Home"
             }
             ]);
     }

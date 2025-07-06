@@ -1,31 +1,27 @@
 ﻿@inject IStringLocalizer<SharedResource> Loc
 
-
-<div class="top-row ps-3">
-    <div class="container-fluid">
-        <a class="text-3xl" href="">
-            <span class="material-symbols-outlined text-3xl">
-                Home
-            </span>
-            @Loc["Navbar_HomePageText"]
-        </a>
-        <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+<div class="rounded-3xl">
+    <div class="bg-blue-300">
+        <div class="container-fluid">
+            <a class="text-3xl" href="">
+                <span class="material-symbols-outlined text-3xl">
+                    Home
+                </span>
+                @Loc["Navbar_HomePageText"]
+            </a>
+        </div>
     </div>
-</div>
 
-<div class="nav-scrollable" @onclick="ToggleNavMenu">
-    <nav class="nav flex-column">
-        @foreach(var route in AppRouteConfig.CurrentRoutes.Routes)
-        {
-            <ResumeApp.Pages.Components.CustomNavLink
-                MaterialIcon="@route.MaterialIcon"
-                RedirectionPath="@route.SubPath"
-                LocalizationPath="@Loc[@route.LocalizationNamePath]"
-            />
-        }
-    </nav>
+    <div class="nav-scrollable" @onclick="ToggleNavMenu">
+        <nav class="nav flex-column">
+            @foreach (var route in AppRouteConfig.CurrentRoutes.Routes)
+            {
+                <ResumeApp.Pages.Components.CustomNavLink MaterialIcon="@route.MaterialIcon"
+                                                          RedirectionPath="@route.SubPath"
+                                                          LocalizationPath="@Loc[@route.LocalizationNamePath]" />
+            }
+        </nav>
+    </div>
 </div>
 
 @code {

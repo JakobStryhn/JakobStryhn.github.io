@@ -2,8 +2,6 @@ using Blazored.LocalStorage;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using ResumeApp;
-using ResumeApp.Services;
-using ResumeApp.Services.Interfaces;
 using System.Globalization;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
@@ -15,7 +13,7 @@ builder.RootComponents.Add<HeadOutlet>("head::after");
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 
 // Note : Transient should work as expected on a static WASM Application
-builder.Services.AddTransient<IImageResizer, ImageResizer>();
+// Transient Services
 
 // Blazored for using local browser storage
 builder.Services.AddBlazoredLocalStorage();

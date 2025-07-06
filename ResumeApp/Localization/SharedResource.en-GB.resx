@@ -117,22 +117,13 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ComponentLibrary" xml:space="preserve">
-    <value>Component Library</value>
+  <data name="NavLink_Home" xml:space="preserve">
+    <value>Home</value>
   </data>
-  <data name="Home" xml:space="preserve">
+  <data name="Navbar_HomePageText" xml:space="preserve">
     <value>Home</value>
   </data>
   <data name="Home_IntroText" xml:space="preserve">
-    <value>Welcome this is an intro text.</value>
-  </data>
-  <data name="Navbar_HomePageText" xml:space="preserve">
-    <value>Jakob Stryhns website</value>
-  </data>
-  <data name="Projects" xml:space="preserve">
-    <value>Projects</value>
-  </data>
-  <data name="Resume" xml:space="preserve">
-    <value>Resume</value>
+    <value>Hello World!</value>
   </data>
 </root>

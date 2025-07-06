@@ -7,17 +7,14 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-green-300: oklch(87.1% 0.15 154.449);
     --color-green-400: oklch(79.2% 0.209 151.711);
-    --color-green-500: oklch(72.3% 0.219 149.579);
-    --color-gray-400: oklch(70.7% 0.022 261.325);
-    --color-gray-800: oklch(27.8% 0.033 256.848);
+    --color-blue-300: oklch(80.9% 0.105 251.813);
     --color-black: #000;
-    --color-white: #fff;
     --spacing: 0.25rem;
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
     --radius-lg: 0.5rem;
+    --radius-3xl: 1.5rem;
     --animate-spin: spin 1s linear infinite;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
@@ -187,9 +184,6 @@
   .bottom-0 {
     bottom: calc(var(--spacing) * 0);
   }
-  .bottom-0\.5 {
-    bottom: calc(var(--spacing) * 0.5);
-  }
   .left-0 {
     left: calc(var(--spacing) * 0);
   }
@@ -213,9 +207,6 @@
   }
   .h-full {
     height: 100%;
-  }
-  .max-h-fit {
-    max-height: fit-content;
   }
   .min-h-screen {
     min-height: 100vh;
@@ -265,6 +256,9 @@
   .rounded {
     border-radius: 0.25rem;
   }
+  .rounded-3xl {
+    border-radius: var(--radius-3xl);
+  }
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
@@ -276,20 +270,11 @@
     --tw-border-style: dashed;
     border-style: dashed;
   }
-  .bg-gray-400 {
-    background-color: var(--color-gray-400);
-  }
-  .bg-gray-800 {
-    background-color: var(--color-gray-800);
-  }
-  .bg-green-300 {
-    background-color: var(--color-green-300);
+  .bg-blue-300 {
+    background-color: var(--color-blue-300);
   }
   .bg-green-400 {
     background-color: var(--color-green-400);
-  }
-  .bg-green-500 {
-    background-color: var(--color-green-500);
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
@@ -303,9 +288,6 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
-  .ps-3 {
-    padding-inline-start: calc(var(--spacing) * 3);
-  }
   .pb-16 {
     padding-bottom: calc(var(--spacing) * 16);
   }
@@ -316,17 +298,11 @@
   .text-black {
     color: var(--color-black);
   }
-  .text-white {
-    color: var(--color-white);
-  }
   .underline {
     text-decoration-line: underline;
   }
   .opacity-0 {
     opacity: 0%;
-  }
-  .opacity-15 {
-    opacity: 15%;
   }
   .opacity-85 {
     opacity: 85%;
