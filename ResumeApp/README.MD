@@ -1,5 +1,8 @@
+# DISCLAIMER 
+I AM NOT A GOOD FRONT END DESIGNER 
+
 ## What is this?
-Small home project with automatic deployment for GitHub Pages
+Small home project with automatic deployment for GitHub 
 
 ## Tech stack
 It is running on a Blazor WebAssembly Front End since GitHub pages only takes static web applications
