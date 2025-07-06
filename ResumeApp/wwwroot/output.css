@@ -7,9 +7,14 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-green-300: oklch(87.1% 0.15 154.449);
     --color-green-400: oklch(79.2% 0.209 151.711);
+    --color-green-500: oklch(72.3% 0.219 149.579);
     --color-blue-300: oklch(80.9% 0.105 251.813);
+    --color-gray-400: oklch(70.7% 0.022 261.325);
+    --color-gray-800: oklch(27.8% 0.033 256.848);
     --color-black: #000;
+    --color-white: #fff;
     --spacing: 0.25rem;
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
@@ -202,14 +207,26 @@
   .hidden {
     display: none;
   }
+  .table {
+    display: table;
+  }
+  .h-1 {
+    height: calc(var(--spacing) * 1);
+  }
   .h-1\/2 {
     height: calc(1/2 * 100%);
   }
   .h-full {
     height: 100%;
   }
+  .max-h-fit {
+    max-height: fit-content;
+  }
   .min-h-screen {
     min-height: 100vh;
+  }
+  .w-1 {
+    width: calc(var(--spacing) * 1);
   }
   .w-1\/2 {
     width: calc(1/2 * 100%);
@@ -219,6 +236,12 @@
   }
   .flex-grow {
     flex-grow: 1;
+  }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .transform {
+    transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
   }
   .animate-spin {
     animation: var(--animate-spin);
@@ -262,6 +285,10 @@
   .rounded-lg {
     border-radius: var(--radius-lg);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
@@ -273,8 +300,20 @@
   .bg-blue-300 {
     background-color: var(--color-blue-300);
   }
+  .bg-gray-400 {
+    background-color: var(--color-gray-400);
+  }
+  .bg-gray-800 {
+    background-color: var(--color-gray-800);
+  }
+  .bg-green-300 {
+    background-color: var(--color-green-300);
+  }
   .bg-green-400 {
     background-color: var(--color-green-400);
+  }
+  .bg-green-500 {
+    background-color: var(--color-green-500);
   }
   .p-4 {
     padding: calc(var(--spacing) * 4);
@@ -288,6 +327,9 @@
   .py-3 {
     padding-block: calc(var(--spacing) * 3);
   }
+  .ps-3 {
+    padding-inline-start: calc(var(--spacing) * 3);
+  }
   .pb-16 {
     padding-bottom: calc(var(--spacing) * 16);
   }
@@ -298,14 +340,24 @@
   .text-black {
     color: var(--color-black);
   }
+  .text-white {
+    color: var(--color-white);
+  }
   .underline {
     text-decoration-line: underline;
   }
   .opacity-0 {
     opacity: 0%;
   }
+  .opacity-15 {
+    opacity: 15%;
+  }
   .opacity-85 {
     opacity: 85%;
+  }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
   }
   .hover\:cursor-pointer {
     &:hover {
@@ -315,7 +367,32 @@
     }
   }
 }
+@property --tw-rotate-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-y {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-rotate-z {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-x {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-skew-y {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-outline-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
@@ -328,7 +405,13 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-rotate-x: initial;
+      --tw-rotate-y: initial;
+      --tw-rotate-z: initial;
+      --tw-skew-x: initial;
+      --tw-skew-y: initial;
       --tw-border-style: solid;
+      --tw-outline-style: solid;
     }
   }
 }
