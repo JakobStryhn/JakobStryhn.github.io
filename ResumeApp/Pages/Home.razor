@@ -1,7 +1,12 @@
-﻿@page "/"
+﻿@inject IStringLocalizer<SharedResource> Loc
+@page "/"
 
-<PageTitle>Home</PageTitle>
+<PageTitle>@Loc["Home"]</PageTitle>
 
-<h1 class="animate-spin text-3xl underline">Hello world!!</h1>
+<h1 class="text-3xl underline">@Loc["Home"]</h1>
 
-Welcome to your new app.
+@Loc["Home_IntroText"]
+
+@code {
+
+}

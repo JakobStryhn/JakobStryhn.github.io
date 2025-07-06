@@ -1,0 +1,17 @@
+﻿<div class="nav-item flex flex-row px-3 py-3">
+    <span class="material-symbols-outlined text-3xl">@MaterialIcon</span>
+    <NavLink class="nav-link" href="@RedirectionPath" Match="NavLinkMatch.All">
+        <p class="text-3xl"> 
+        @LocalizationPath
+        </p>
+    </NavLink>
+</div>
+
+@code {
+    [Parameter]
+    public required string MaterialIcon { get; init; }
+    [Parameter]
+    public required string RedirectionPath { get; init;  }
+    [Parameter]
+    public required string LocalizationPath { get; init; }
+}

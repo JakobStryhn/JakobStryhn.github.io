@@ -1,0 +1,39 @@
+﻿@using Blazored.LocalStorage
+@inject NavigationManager Navigation
+@inject ILocalStorageService LocalStorage
+
+<div class="rounded">
+    <select id="languageSelect" @bind="CurrentCulture">
+        @foreach (var culture in SupportedCultures)
+        {
+            <option value="@culture.Name">@culture.DisplayName</option>
+        }
+    </select>
+</div>
+
+@code {
+
+    private CultureInfo CurrentCulture
+    {
+        get => CultureInfo.CurrentUICulture;
+        set
+        {
+            if (CultureInfo.CurrentUICulture.Name != value.Name)
+            {
+                SetCulture(value);
+            }
+        }
+    }
+    private List<CultureInfo> SupportedCultures { get; init; } = new()
+    {
+        new CultureInfo("en-GB"),
+        new CultureInfo("da-DK")
+    };
+
+    private async void SetCulture(CultureInfo culture)
+    {
+        await LocalStorage.SetItemAsync("culture", culture.Name);
+
+        Navigation.NavigateTo(Navigation.Uri, forceLoad: true);
+    }
+}

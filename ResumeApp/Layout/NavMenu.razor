@@ -1,9 +1,13 @@
-﻿<div class="top-row navbar navbar-dark ps-3">
+﻿@inject IStringLocalizer<SharedResource> Loc
+
+
+<div class="top-row ps-3">
     <div class="container-fluid">
-        <a class="navbar-brand material" href="">
-            <span class="material-symbols-outlined">
-                shield_with_house
+        <a class="text-3xl" href="">
+            <span class="material-symbols-outlined text-3xl">
+                Home
             </span>
+            @Loc["Navbar_HomePageText"]
         </a>
         <button title="Navigation menu" class="navbar-toggler" @onclick="ToggleNavMenu">
             <span class="navbar-toggler-icon"></span>
@@ -11,23 +15,16 @@
     </div>
 </div>
 
-<div class="@NavMenuCssClass nav-scrollable" @onclick="ToggleNavMenu">
+<div class="nav-scrollable" @onclick="ToggleNavMenu">
     <nav class="nav flex-column">
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
-                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="false"></span> Home
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="projects">
-                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="false"></span> Counter
-            </NavLink>
-        </div>
-        <div class="nav-item px-3">
-            <NavLink class="nav-link" href="Test2">
-                <span class="bi bi-list-nested-nav-menu" aria-hidden="false"></span> Weather
-            </NavLink>
-        </div>
+        @foreach(var route in AppRouteConfig.CurrentRoutes.Routes)
+        {
+            <ResumeApp.Pages.Components.CustomNavLink
+                MaterialIcon="@route.MaterialIcon"
+                RedirectionPath="@route.SubPath"
+                LocalizationPath="@Loc[@route.LocalizationNamePath]"
+            />
+        }
     </nav>
 </div>
 
