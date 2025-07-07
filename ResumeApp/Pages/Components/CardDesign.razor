@@ -1,0 +1,22 @@
+﻿@inherits LayoutComponentBase
+<div class="mt-8 rounded-lg bg-white p-6 shadow-md">
+    <div class="flex flex-row">
+        <h2 class="pb-5 text-2xl font-semibold text-gray-800">@Title</h2>
+        @if (UsesInformationBox)
+        {
+            <span class="material-symbols-outlined" title="@InformationBoxContent"> Info </span>
+        }
+    </div>
+    @ChildContent
+</div>
+
+@code {
+    [Parameter]
+    public required string Title { get; init; }
+    [Parameter]
+    public required string InformationBoxContent { get; init; }
+    [Parameter]
+    public required bool UsesInformationBox { get; init; }
+    [Parameter]
+    public RenderFragment? ChildContent { get; set; }
+}

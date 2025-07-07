@@ -1,0 +1,24 @@
+﻿@using ResumeApp.Pages.Components
+@inject IStringLocalizer<SharedResource> Loc
+
+<header class="bg-gray-800 text-white shadow-lg">
+    <nav class="relative container mx-auto flex items-center justify-between px-4 py-3">
+        @* Left Side *@
+        <a href="#" class="flex items-center space-x-2 text-2xl font-bold text-white transition-colors duration-300 hover:text-blue-400">
+            <span>Jakob Min Stryhn - Software Engineer</span>
+        </a>
+        <Localizer />
+        @* Right Side*@
+        <div class="items-center space-x-6 lg:space-x-8">
+            @foreach(Route route in AppRouteConfig.HeaderRoutes.Routes)
+            {
+                if (route.IsPublished)
+                {
+                    <a href="@route.SubPath" class="text-lg font-medium text-gray-300 transition-colors duration-300 hover:text-white">
+                        @Loc[route.LocalizationNamePath]
+                    </a>
+                }
+            }
+        </div>
+    </nav>
+</header>

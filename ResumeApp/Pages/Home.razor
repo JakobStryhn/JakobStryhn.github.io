@@ -1,12 +1,13 @@
 ﻿@inject IStringLocalizer<SharedResource> Loc
+@layout FrontPageLayout
 @page "/"
 
-<PageTitle>@Loc["Home"]</PageTitle>
+<PageTitle>@Loc["Home_Title"]</PageTitle>
 
-<h1 class="text-3xl underline">@Loc["Home"]</h1>
+<p>Guten Tag</p>
 
-@Loc["Home_IntroText"]
+<img class="h-50 w-50 animate-spin rounded-full object-cover" src="images/profile.jpeg"/>
 
 @code {
-
+    
 }

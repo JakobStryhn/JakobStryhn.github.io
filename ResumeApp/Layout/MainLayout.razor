@@ -1,24 +1,12 @@
-﻿@using ResumeApp.Pages.Components
+﻿@using ResumeApp.Layout.Portal_Layouts
+@using ResumeApp.Pages.Components
 @inherits LayoutComponentBase
-<div class="page">
+
+<div class="flex h-screen">
     @* SideBar *@
-    <div class="sidebar">
-        <NavMenu />
+    <NavigationMenu />
+    @* Body*@
+    <div class="flex-1 overflow-auto py-6 pr-40 pl-80">
+        @Body
     </div>
-
-    <main class="relative flex flex-grow flex-col">
-        @* Main content area that grows and is a flex column *@
-        @* Header? *@
-        
-        @* Body *@
-        <article class="content flex-grow overflow-y-auto px-4 pb-16">
-            @Body
-        </article>
-
-        @* Footer*@
-        <div class="footer-fixed fixed bottom-0 left-0 z-50 flex w-full items-center justify-between rounded bg-green-400 p-4 text-black opacity-85">
-            <Localizer />
-            <a href="Contact" target="_blank">Contact</a>
-        </div>
-    </main>
 </div>

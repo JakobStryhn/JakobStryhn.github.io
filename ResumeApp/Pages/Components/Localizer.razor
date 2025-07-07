@@ -2,8 +2,8 @@
 @inject NavigationManager Navigation
 @inject ILocalStorageService LocalStorage
 
-<div class="rounded">
-    <select id="languageSelect" @bind="CurrentCulture">
+<div class="rounded shadow-lg">
+    <select class="bg-gray-800 text-white shadow-lg" @bind="CurrentCulture">
         @foreach (var culture in SupportedCultures)
         {
             <option value="@culture.Name">@culture.DisplayName</option>

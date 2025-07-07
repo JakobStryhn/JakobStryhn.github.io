@@ -117,22 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="ComponentLibrary" xml:space="preserve">
-    <value>Komponent Bibliotek</value>
+  <data name="Header_Contact" xml:space="preserve">
+    <value>Kontakt</value>
   </data>
-  <data name="Home" xml:space="preserve">
+  <data name="Header_Home" xml:space="preserve">
     <value>Forside</value>
   </data>
-  <data name="Home_IntroText" xml:space="preserve">
-    <value>Velkommen det her er en intro tekst.</value>
+  <data name="Header_Playground" xml:space="preserve">
+    <value>Legeplads</value>
+  </data>
+  <data name="Header_Resume" xml:space="preserve">
+    <value>CV</value>
   </data>
   <data name="Navbar_HomePageText" xml:space="preserve">
     <value>Jakob Stryhns hjemmeside</value>
   </data>
-  <data name="Projects" xml:space="preserve">
+  <data name="NavLink_Baking" xml:space="preserve">
+    <value>Bagning</value>
+  </data>
+  <data name="NavLink_Home" xml:space="preserve">
+    <value>Forside</value>
+  </data>
+  <data name="NavLink_Kombucha" xml:space="preserve">
+    <value>Kombucha</value>
+  </data>
+  <data name="NavLink_Playground" xml:space="preserve">
+    <value>Legeplads</value>
+  </data>
+  <data name="NavLink_Projects" xml:space="preserve">
     <value>Projekter</value>
   </data>
-  <data name="Resume" xml:space="preserve">
+  <data name="NavLink_Resume" xml:space="preserve">
     <value>CV</value>
+  </data>
+  <data name="NavLink_Contact" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="NavLink_Toybox" xml:space="preserve">
+    <value>Legetøjskasse</value>
+  </data>
+  <data name="Toybox_Title" xml:space="preserve">
+    <value>Legetøjskassen</value>
   </data>
 </root>

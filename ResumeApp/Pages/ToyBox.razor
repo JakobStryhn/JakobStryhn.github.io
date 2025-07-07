@@ -1,0 +1,21 @@
+﻿@inject IStringLocalizer<SharedResource> Loc
+@using Microsoft.Extensions.Localization
+@using ResumeApp.Pages.Components
+@page "/toybox"
+
+<PageTitle>@Loc["Toybox_Title"]</PageTitle>
+
+
+<div class="grid-cols-3">
+        <CardDesign 
+            Title="Image Resizer"
+            InformationBoxContent="Attempts to resize any JPEG given to fit 1mb size requirements, such as GitHub profile images!"
+            UsesInformationBox=true
+        >
+        <ImageResizer />
+        </CardDesign>
+</div>
+
+@code {
+
+}

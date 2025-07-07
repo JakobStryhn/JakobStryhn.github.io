@@ -1,59 +1,103 @@
-﻿namespace ResumeApp.Layout
+﻿using System.Collections.Immutable;
+
+namespace ResumeApp.Layout
 {
     public class Route
     {
-        public required string MaterialIcon { get; set; }
-        public required string SubPath { get; set; }
-        public required string LocalizationNamePath { get; set; }
+        public string? MaterialIcon { get; init; }
+        public required string SubPath { get; init; }
+        public required string LocalizationNamePath { get; init; }
+        public required bool IsPublished { get; init; }
     }
 
-    public record AppRoutes(IReadOnlyList<Route> Routes);
+    public record AppRoutes(ImmutableArray<Route> Routes);
     public static class AppRouteConfig
     {
-        public static AppRoutes CurrentRoutes { get; } = new AppRoutes(
+        public static AppRoutes NavigationMenuRoutes { get; } = new AppRoutes(
         [
             new Route
             {
-                MaterialIcon = "Cottage",
+                MaterialIcon = "Arrow_Back",
                 SubPath = "",
-                LocalizationNamePath = "Home"
+                LocalizationNamePath = "NavLink_Home",
+                IsPublished = true
+            },
+
+            new Route
+            {
+                MaterialIcon = "Account_Box",
+                SubPath = "Contact",
+                LocalizationNamePath = "NavLink_Contact",
+                IsPublished = true
             },
             new Route
             {
                 MaterialIcon = "Assignment",
                 SubPath = "resume",
-                LocalizationNamePath = "Resume"
+                LocalizationNamePath = "NavLink_Resume",
+                IsPublished = true
             },
             new Route
             {
                 MaterialIcon = "Code",
                 SubPath = "projects",
-                LocalizationNamePath = "Projects"
+                LocalizationNamePath = "NavLink_Projects",
+                IsPublished = false,
+            },
+            new Route
+            {
+                MaterialIcon = "Toys",
+                SubPath = "toybox",
+                LocalizationNamePath = "NavLink_Toybox",
+                IsPublished = true,
             },
             new Route
             {
                 MaterialIcon = "Developer_Board",
                 SubPath = "components",
-                LocalizationNamePath = "ComponentLibrary"
-            },
-            new Route
-            {
-                MaterialIcon = "Playground",
-                SubPath = "playground",
-                LocalizationNamePath = "Playground"
+                LocalizationNamePath = "NavLink_Components",
+                IsPublished = false
             },
             new Route
             {
                 MaterialIcon = "Grocery",
                 SubPath = "kombucha",
-                LocalizationNamePath = "Kombucha"
+                LocalizationNamePath = "NavLink_Kombucha",
+                IsPublished = false
             },
             new Route
             {
                 MaterialIcon = "Breakfast_Dining",
                 SubPath = "baking",
-                LocalizationNamePath = "Baking"
+                LocalizationNamePath = "NavLink_Baking",
+                IsPublished = false
             }
             ]);
+
+        public static AppRoutes HeaderRoutes { get; } = new AppRoutes(
+        [
+            new Route {
+                SubPath = "",
+                LocalizationNamePath = "Header_Home",
+                IsPublished = true
+            },
+            new Route {
+                SubPath = "resume",
+                LocalizationNamePath = "Header_Resume",
+                IsPublished = true
+            },
+            new Route {
+                SubPath = "Contact",
+                LocalizationNamePath = "Header_Contact",
+                IsPublished = true
+            },
+            new Route
+            {
+                MaterialIcon = "Code",
+                SubPath = "playground",
+                LocalizationNamePath = "Header_Playground",
+                IsPublished = true,
+            },
+        ]);
     }
 }

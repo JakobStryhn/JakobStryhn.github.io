@@ -1,10 +1,8 @@
-﻿@page "/resume"
+﻿@inject IStringLocalizer<SharedResource> Loc
+@layout ResumeLayout
+@page "/resume"
 
-<PageTitle>Resume</PageTitle>
-
-<h1 class="text-3xl underline">Resume</h1>
-
-Fancy resume and such
+<PageTitle>@Loc["Resume_Title"]</PageTitle>
 
 @code {
 

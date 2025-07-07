@@ -1,11 +1,10 @@
-﻿<div class="nav-item flex flex-row px-3 py-3">
+﻿@inject NavigationManager nav
+
+<a href="@RedirectionPath"
+   class="flex items-center space-x-3 rounded-lg px-3 py-2 text-gray-300 transition-colors duration-200 hover:bg-gray-700 hover:text-white">
     <span class="material-symbols-outlined text-3xl">@MaterialIcon</span>
-    <NavLink class="nav-link" href="@RedirectionPath" Match="NavLinkMatch.All">
-        <p class="text-3xl"> 
-        @LocalizationPath
-        </p>
-    </NavLink>
-</div>
+    <span>@LocalizationPath</span>
+</a>
 
 @code {
     [Parameter]
