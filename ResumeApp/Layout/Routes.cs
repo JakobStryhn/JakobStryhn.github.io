@@ -2,6 +2,10 @@
 
 namespace ResumeApp.Layout
 {
+    public class RouteConfig {
+        public const string HOME = "/"; 
+    }
+
     public class Route
     {
         public string? MaterialIcon { get; init; }
@@ -18,7 +22,7 @@ namespace ResumeApp.Layout
             new Route
             {
                 MaterialIcon = "Arrow_Back",
-                SubPath = "",
+                SubPath = HOME,
                 LocalizationNamePath = "NavLink_Home",
                 IsPublished = true
             },
