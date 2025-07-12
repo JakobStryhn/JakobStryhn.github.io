@@ -55,3 +55,4 @@ nunit-*.xml
 .vs/
 ResumeApp/node_modules/
 /ResumeApp/wwwroot/output.css
+ResumeApp/ResumeApp.csproj.Backup.tmp

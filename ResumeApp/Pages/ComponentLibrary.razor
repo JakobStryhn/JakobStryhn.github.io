@@ -1,7 +1,7 @@
 ﻿@inject IStringLocalizer<SharedResource> Loc
 @using Microsoft.Extensions.Localization
-@page "/components"
-<PageTitle>@Loc["Components_Title"]</PageTitle>
+@attribute [Route(RouteConfig.COMPONENTS)]
+<PageTitle>@Loc["Title_Components"]</PageTitle>
 
 
 <div class="grid-cols-3">

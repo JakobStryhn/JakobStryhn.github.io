@@ -1,9 +1,261 @@
 ﻿@inject IStringLocalizer<SharedResource> Loc
 @layout ResumeLayout
-@page "/resume"
+@attribute [Route(RouteConfig.RESUME)]
 
-<PageTitle>@Loc["Resume_Title"]</PageTitle>
+<PageTitle>@Loc["Title_Resume"]</PageTitle>
 
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jakob Min Stryhn - Software Engineer</title>
+</head>
+
+@* Resume *@
+<body class="container mx-auto my-8 grid grid-cols-7 shadow-lg">
+    @* Left Side*@
+    <div class="bg-gray-100 text-black col-span-4 p-6">
+        <section class="mb-6">
+            <h2 class="mb-4 flex items-center text-xl font-semibold">
+                <span class="material-symbols-outlined">
+                    Account_Box
+                </span>
+                <span class="pl-2"> PROFILE </span>
+            </h2>
+            <p class="text-sm leading-relaxed">
+                A highly skilled and motivated Software Engineer, with a passion for creating scalable and robust applications. Having had a leading role in the development of projects of various sizes, from inhouse applications to EU encompassing systems and integrations.
+                I am seeking a new position where I can leverage my expertise and develop innovative solutions and contribute to further development of myself and a new team.
+            </p>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="mb-4 flex items-center text-xl font-semibold">
+                <span class="material-symbols-outlined">
+                    Language
+                </span>
+                <span class="pl-2"> LANGUAGES </span>
+            </h2>
+
+            @* Seperate out to Languages.Razor - Insert Dictionary<string, enum>*@
+            <ul class="text-sm">
+                <li class="mb-1 flex items-center justify-between">
+                    <span> Danish</span>
+                    <div class="flex space-x-1">
+                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
+                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
+                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
+                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
+                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
+                    </div>
+                </li>
+                <li class="flex items-center justify-between">
+                    <span> English</span>
+                    <div class="flex space-x-1">
+                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
+                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
+                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
+                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
+                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="mb-4 flex items-center text-xl font-semibold">
+                <span class="material-symbols-outlined">
+                    Cognition_2
+                </span>
+                <span class="pl-2"> Skills </span>
+            </h2>
+            @* Extract into a new component called SkillGroup.Razor - Do foreach*@
+            <div class="text-sm">
+                <h3 class="mb-1 font-semibold"> Programming Languages</h3>
+                <p class="mb-2 ml-4"> • C# | Java | Javascript | TypeScript</p>
+
+                <h3 class="mb-1 font-semibold"> Front End Stack</h3>
+                <p class="mb-2 ml-4"> • Blazor | StencilJS | VueJS | React</p>
+
+                <h3 class="mb-1 font-semibold"> Back End Stack</h3>
+                <p class="mb-2 ml-4"> • .NET | ASP.NET Core | Web API | gRPC</p>
+
+                <h3 class="mb-1 font-semibold"> Databases</h3>
+                <p class="mb-2 ml-4"> • PostgreSQL | MySQL | MongoDB</p>
+
+                <h3 class="mb-1 font-semibold"> ORM</h3>
+                <p class="mb-2 ml-4"> • Entity Framework, Dapper, MongoDB C# Driver</p>
+
+                <h3 class="mb-1 font-semibold"> DevOps/Tools</h3>
+                <p class="mb-2 ml-4"> • Git | Docker | Kubernetes | CI/CD | SoapUI</p>
+            </div>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="mb-4 flex items-center text-xl font-semibold">
+                <span class="material-symbols-outlined">
+                    School
+                </span>
+                <span class="pl-2"> Education </span>
+            </h2>
+            <div class="text-sm">
+                <p class="font-semibold"> Software Development (Bachelor Degree)</p>
+                <p class="mb-1"> Business Academy Southwest</p>
+                <p class="mb-2"> 08/2020 - 01/2022 | Esbjerg, Denmark</p>
+                <ul class="ml-4 list-inside list-disc">
+                    <li> Databases for Developers</li>
+                    <li> Development of Large Systems</li>
+                    <li> Internet of Things (IoT)</li>
+                    <li> Machine Learning</li>
+                    <li> Parallel Programming</li>
+                    <li> Testing</li>
+                    <li> System Integrations</li>
+                </ul>
+
+                <p class="mt-4 font-semibold"> Computer Science</p>
+                <p class="mb-1"> Business Academy Southwest</p>
+                <p class="mb-2"> 2017 - 2020 | Esbjerg, Denmark</p>
+                <ul class="ml-4 list-inside list-disc">
+                    <li> Advanced Web Apps</li>
+                    <li> Autonomous Agents</li>
+                    <li> Cyber Security</li>
+                    <li> Mobile Programming</li>
+                    <li> Networking</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    @* Right Side*@
+    <div class="bg-gray-300 text-black col-span-3 p-6">
+        <header class="border-gray-200 mb-6 flex flex-col items-center border-b pb-6">
+            <div class="text-center">
+                <h1 class="text-4xl font-bold"> Jakob Min Stryhn</h1>
+                <p class="text-xl"> Software Engineer</p>
+                <div class="mb-4 flex justify-center">
+                    <img src="images/profile.jpeg" alt="Jakob Min Stryhn"
+                         class="border-gray-300 w-46 mx-auto h-46 rounded-full border-4 object-cover hover:cursor-pointer @(isProfileSpinning ? "animate-spin" : "")"
+                         onclick="@onProfileClick">
+                </div>
+                <div class="mt-4 mb-1 items-center justify-center md:justify-start">
+                    <p class="mb-1 flex">
+                        <a href="mailto:jakobstryhn@hotmail.com" class="flex items-center">
+                            <span class="material-symbols-outlined">
+                                Mail
+                            </span>
+                            <span class="pl-2">
+                                jakobstryhn@hotmail.com
+                            </span>
+                        </a>
+                    </p>
+                    <p class="mb-1 flex">
+                        <span class="material-symbols-outlined">
+                            Call
+                        </span>
+                        +45 29808009
+                    </p>
+                    <p class="mb-1 flex">
+                        <span class="material-symbols-outlined">
+                            Distance
+                        </span>
+                        <span class="pl-2">
+                            N J Poulsens Vej 2. 2 (Relocatable)
+                        </span>
+                    </p>
+                    <p class="mb-1 flex">
+                        <a href="https://www.linkedin.com/in/jakobstryhn" target="_blank" rel="noopener noreferrer" class="flex items-center">
+                            <svg class="bg-gray-200" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 448 512">
+                                <path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                            </svg>
+                            <span class="pl-2">
+                                linkedin.com/in/jakobstryhn
+                            </span>
+                        </a>
+                    </p>
+                    <p class="mb-1 flex">
+                        <a href="https://jakobstryhn.github.io/" target="_blank" rel="noopener noreferrer" class="flex items-center">
+                            <span class="material-symbols-outlined">
+                                Globe
+                            </span>
+                            <span class="pl-2">
+                                https://jakobstryhn.github.io/
+                            </span>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </header>
+
+        <section class="mb-6">
+            <h2 class="border-gray-200 mb-4 flex items-center border-b pb-2 text-xl font-semibold">
+                <span class="material-symbols-outlined">
+                    License
+                </span>
+                CERTIFICATES
+            </h2>
+            <div class="text-sm">
+                <p class="mb-1 font-semibold"> Introduction to Kubernetes</p>
+                <ul class="mb-4 ml-4 list-inside list-disc">
+                    <li> Danish Technological Institute</li>
+                </ul>
+
+                <p class="mb-1 font-semibold"> IT Architect Foundation</p>
+                <ul class="ml-4 list-inside list-disc">
+                    <li> Danish Technological Institute</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="mb-6">
+            <h2 class="mb-4 flex items-center border-b pb-2 text-xl font-semibold">
+                <span class="material-symbols-outlined">
+                    Enterprise
+                </span>
+                PROFESSIONAL EXPERIENCE
+            </h2>
+            <div class="text-sm">
+                <div class="mb-4">
+                    <p class="font-semibold"> Sikkerhedsstyrelsen (Danish Safety Technology Authority)</p>
+                    <p> Software Engineer (Senior Software Engineer 2024)</p>
+                    <p class="mb-2"> 2022 - present | Esbjerg, Denmark</p>
+                    <ul class="ml-4 list-inside list-disc">
+                        <li> Team leadership</li>
+                        <li> Scrum master responsibility</li>
+                        <li> Solution Architecture</li>
+                    </ul>
+                </div>
+
+                <div class="mb-4">
+                    <p class="font-semibold"> Grumsen Development</p>
+                    <p> Fullstack Developer (Internship)</p>
+                    <p class="mb-2"> 2021 - 2021</p>
+                    <ul class="ml-4 list-inside list-disc">
+                        <li> B2B System Integration</li>
+                        <li> SQL Optimization using Dapper</li>
+                        <li> Refactoring and modernizing legacy software</li>
+                        <li> Normalizing internal developer tools through NuGet and NPM packages</li>
+                    </ul>
+                </div>
+
+                <div class="mb-4">
+                    <p class="font-semibold"> Creditro A/S</p>
+                    <p> Fullstack Developer (Internship)</p>
+                    <p class="mb-2"> 2019 - 2019</p>
+                    <p class="mb-1 font-semibold"> Primary work included</p>
+                    <ul class="ml-4 list-inside list-disc">
+                        <li> B2B System Integrations</li>
+                        <li> Aggregation and manipulation of Big Data</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
 @code {
+    private bool isProfileSpinning = false;
 
+    private void onProfileClick()
+    {
+        isProfileSpinning = !isProfileSpinning;
+        StateHasChanged();
+    }
 }

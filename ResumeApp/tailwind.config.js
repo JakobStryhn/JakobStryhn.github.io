@@ -1,67 +1,62 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./../**/*.{razor,html,cshtml}"],
+    content: ["./**/*.{razor,html,cshtml}"],
     theme: {
+        colors: {
+            //* Add Colors 
+            // "contrast-baby-blue": '#B4CAE4',
+            // */
+
+        },
         extend: {
             width: {
                 "screen": "100%"
             },
-            colors: {
-                "defaultext": "#2A2A29",
-                "chip": {
-                    "selected": "#073331",
-                    "border": {
-                        "default": "#073331",
-                        "inactive": "#073331/50",
-                    },
+            backgroundImage: {
+                'checkerboard-pattern': "url('/images/Checkerboard.png')"
+            },
+            keyframes: {
+                'fade-in-down': {
+                    '0%': { opacity: '0', transform: 'translateY(-20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
                 },
-                "tab": {
-                    "selected": "#073331"
+                'fade-in-up': {
+                    '0%': { opacity: '0', transform: 'translateY(20px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
                 },
-                "table": {
-                    "devider": "#B4CAE4"
+                'fade-in': {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' },
                 },
-                "outline": "#B4CAE4",
-                "status": {
-                    "pending": "#FCCFCD",
-                    "progress": "#FCEDE4",
-                    "done": "#CCE2DF"
-                },
-                "button": {
-                    "surface": "#B4CAE4",
-                    "border": "#073331",
-                },
-                link: '#073331',
-                "link-hover": '#385B5A',
-                "link-visited": '#5A507C',
-
-                required: '#0EA5E9',
-
-                surface: '#F0F5FA',
-
-                primary: '#073331',
-                "primary-light": '#385B5A',
-                secondary: '#E5E9ED',
-                "secondary-light": '#EFF2F4',
-
-                //* Add Colors 
-                // "contrast-baby-blue": '#B4CAE4',
-                // */
-                
-                error: '#F21105',
-                "error-light": '#FCCFCD',
-                success: '#006E62',
-                "success-light": '#CCE2DF',
-                warning: '#F0A678',
-                "warning-light": '#FCEDE4',
-            }
+                'diagonal-move': {
+                    '0%': { backgroundPosition: '0% 0%' },
+                    '100%': { backgroundPosition: '100% 100%' },
+                }
+            },
+            animation: {
+                'fade-in-down': 'fade-in-down 1s ease-out forwards',
+                'fade-in-up': 'fade-in-up 1s ease-out forwards',
+                'fade-in': 'fade-in 1.2s ease-out forwards',
+                'diagonal-move': 'diagonal-move 10s linear infinite'
+            },
+            animationDelay: {
+                100: '100ms',
+                200: '200ms',
+                300: '300ms',
+                400: '400ms',
+                500: '500ms',
+                600: '600ms',
+                700: '700ms',
+                800: '800ms',
+                900: '900ms',
+                1000: '1000ms',
+            },
         },
     },
     variants: {
-        extend: {
-            scale: ['hover'], // Enables the scale-200 class on hover
-        },
+
     },
-    plugins: [],
+    plugins: [
+        require('tailwindcss-animation-delay'),
+    ],
 }
 

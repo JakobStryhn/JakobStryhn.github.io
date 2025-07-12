@@ -1,9 +1,15 @@
 {
+  "scripts": {
+    "tailwind": "npx tailwindcss -i ./styles/input.css -o ./wwwroot/output.css --watch",
+    "dev": "concurrently \"dotnet watch run\" \"npm run tailwind\""
+  },
   "devDependencies": {
     "eslint": "^9.30.1",
-    "tailwindcss": "^4.1.11"
+    "tailwindcss": "^4.1.11",
+    "tailwindcss-animation-delay": "^2.0.2"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.11"
+    "@tailwindcss/cli": "^4.1.11",
+    "concurrently": "^9.2.0"
   }
 }

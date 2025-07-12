@@ -1,12 +1,12 @@
 ﻿@using ResumeApp.Pages.Components
 @inherits LayoutComponentBase
 <div class="column relative flex">
-    <main class="relative flex flex-grow flex-col">
+    <main class="bg-checkerboard-pattern animate-diagonal-move relative flex min-h-screen flex-grow flex-col bg-repeat">
         <ResumeApp.Layout.Front_Layouts.Header />
-
         @* Body *@
-        <article class="content flex-grow overflow-y-auto px-4 pb-16">
+        <article class="content flex-grow overflow-y-auto px-4 pt-4 pb-16">
             @Body
         </article>
     </main>
 </div>
+

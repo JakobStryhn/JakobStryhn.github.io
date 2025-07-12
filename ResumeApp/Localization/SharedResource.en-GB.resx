@@ -156,7 +156,19 @@
   <data name="NavLink_Toybox" xml:space="preserve">
     <value>Toybox</value>
   </data>
-  <data name="Toybox_Title" xml:space="preserve">
+  <data name="Title_Home" xml:space="preserve">
+    <value>Jakob Stryhns Website</value>
+  </data>
+  <data name="Title_Resume" xml:space="preserve">
+    <value>Jakob Stryhns Resume</value>
+  </data>
+  <data name="Title_Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="Title_Toybox" xml:space="preserve">
     <value>Toybox</value>
+  </data>
+  <data name="Title_Playground" xml:space="preserve">
+    <value>Playground</value>
   </data>
 </root>

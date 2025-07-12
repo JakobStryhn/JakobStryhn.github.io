@@ -1,1 +1,106 @@
 @import "tailwindcss";
+
+@keyframes fade-in-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes diagonal-move {
+    0% {
+        background-position: 100% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+.bg-checkerboard-pattern {
+    background-image: url("/images/Checkerboard.png");
+}
+
+.animate-diagonal-move {
+    animation: diagonal-move 20s linear infinite
+}
+
+.animate-fade-in-down {
+    animation: fade-in-down 1s ease-out forwards;
+}
+
+.animate-fade-in-up {
+    animation: fade-in-up 1s ease-out forwards;
+}
+
+.animate-fade-in {
+    animation: fade-in 1.2s ease-out forwards;
+}
+
+.delay-100 {
+    animation-delay: 100ms;
+}
+
+.delay-200 {
+    animation-delay: 200ms;
+}
+
+..delay-300 {
+    animation-delay: 300ms;
+}
+
+.delay-400 {
+    animation-delay: 400ms;
+}
+
+.delay-500 {
+    animation-delay: 500ms;
+}
+
+.delay-600 {
+    animation-delay: 600ms;
+}
+
+.delay-700 {
+    animation-delay: 700ms;
+}
+
+.delay-800 {
+    animation-delay: 800ms;
+}
+
+.delay-900 {
+    animation-delay: 900ms;
+}
+
+.delay-1000 {
+    animation-delay: 1000ms;
+}
+

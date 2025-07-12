@@ -1,8 +1,8 @@
 ﻿@inject IStringLocalizer<SharedResource> Loc
 @using Microsoft.Extensions.Localization
-@page "/kombucha"
+@attribute [Route(RouteConfig.KOMBUCHA)]
 
-<PageTitle>@Loc["Kombucha_Title"]</PageTitle>
+<PageTitle>@Loc["Title_Kombucha"]</PageTitle>
 
 <div class="grid-cols-3">
     <div class="flex">

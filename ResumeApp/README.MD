@@ -17,3 +17,5 @@ So debugging broke for browsers - and I am currently awaiting a new .Net 9 relea
 
 ### TailwindCSS Reminder
 npx @tailwindcss/cli -i ./styles/input.css -o ./wwwroot/output.css --watch
+
+- Set up custom package.json script for `npm run dev` to run both tailwind and dotnet watch run

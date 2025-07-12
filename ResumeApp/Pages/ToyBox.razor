@@ -1,9 +1,9 @@
 ﻿@inject IStringLocalizer<SharedResource> Loc
 @using Microsoft.Extensions.Localization
 @using ResumeApp.Pages.Components
-@page "/toybox"
+@attribute [Route(RouteConfig.TOYBOX)]
 
-<PageTitle>@Loc["Toybox_Title"]</PageTitle>
+<PageTitle>@Loc["Title_Toybox"]</PageTitle>
 
 
 <div class="grid-cols-3">

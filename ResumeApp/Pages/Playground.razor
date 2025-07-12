@@ -1,7 +1,10 @@
 @inject IStringLocalizer<SharedResource> Loc
 @using Microsoft.Extensions.Localization
 @using ResumeApp.Pages.Components
-@page "/playground"
+@attribute [Route(RouteConfig.PLAYGROUND)]
+
+<PageTitle>@Loc["Title_Playground"]</PageTitle>
+
 
 <CardDesign Title="Hej"/>
 @code {

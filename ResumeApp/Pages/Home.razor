@@ -1,13 +1,19 @@
 ﻿@inject IStringLocalizer<SharedResource> Loc
 @layout FrontPageLayout
-@page "/"
+@attribute [Route(RouteConfig.HOME)]
 
-<PageTitle>@Loc["Home_Title"]</PageTitle>
+<PageTitle>@Loc["Title_Home"]</PageTitle>
 
-<p>Guten Tag</p>
 
-<img class="h-50 w-50 animate-spin rounded-full object-cover" src="images/profile.jpeg"/>
+<div class="z-10 max-h-screen overflow-hidden">
+    <div class="grid grid-cols-3 grid-rows-1">
+        <div class="col-start-3 row-start-1 place-self-center pt-8">
+            <ResumeApp.Pages.Components.ProfileCard />
+        </div>
+    </div>
+</div>
+
 
 @code {
-    
+
 }
