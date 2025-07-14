@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Header_Contact" xml:space="preserve">
-    <value>Kontakt</value>
-  </data>
   <data name="Header_Home" xml:space="preserve">
     <value>Forside</value>
   </data>
@@ -170,5 +167,44 @@
   </data>
   <data name="Title_Playground" xml:space="preserve">
     <value>Legeplads</value>
+  </data>
+  <data name="ProfileCard_Title" xml:space="preserve">
+    <value>Senior Software Udvikler hos Sikkerhedsstyrelsen</value>
+  </data>
+  <data name="ProfileCard_Body" xml:space="preserve">
+    <value>Software Udvikler med passion for innovativ problemløsning via robuste og skalerbare systemer.</value>
+  </data>
+  <data name="ProfileCard_Button_GetMyResume" xml:space="preserve">
+    <value>Hent mit CV</value>
+  </data>
+  <data name="ProfileCard_Button_InteractiveResume" xml:space="preserve">
+    <value>Prøv mit interaktive CV</value>
+  </data>
+  <data name="Header_Contact" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="Header_Title" xml:space="preserve">
+    <value>Software Udvikler</value>
+  </data>
+  <data name="Contact_Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Contact_Phone" xml:space="preserve">
+    <value>Telefonnummer</value>
+  </data>
+  <data name="Contact_SOME" xml:space="preserve">
+    <value>LinkedIn &amp; GitHub</value>
+  </data>
+  <data name="Contact_CardTitle" xml:space="preserve">
+    <value>Kontakt mig</value>
+  </data>
+  <data name="Contact_CardBody" xml:space="preserve">
+    <value> </value>
+  </data>
+  <data name="Playground_PrimaryCard_Title" xml:space="preserve">
+    <value>Velkommen til legepladsen</value>
+  </data>
+  <data name="Playground_PrimaryCard_Body" xml:space="preserve">
+    <value>Det her er den mindre seriøse del af hjemmesiden, hvor jeg vil tilføje ting lidt hist og her. </value>
   </data>
 </root>

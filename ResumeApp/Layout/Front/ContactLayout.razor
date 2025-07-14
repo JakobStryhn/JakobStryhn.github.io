@@ -1,0 +1,16 @@
+﻿@using ResumeApp.Pages.Components
+@inherits LayoutComponentBase
+<div class="column relative flex">
+    <main class="relative flex flex-grow flex-col">
+        <ResumeApp.Layout.Front.Header />
+        <div class="absolute inset-0 -z-100 flex max-h-screen">
+            <img src="images/sunset.jpg" alt="Background" class="h-full w-full object-cover opacity-70">
+            <div class="from-gray-700 via-gray-400 to-transparent absolute inset-0 bg-gradient-to-t opacity-45"></div>
+        </div>
+
+        @* Body *@
+        <article class="content flex-grow overflow-y-auto px-4 pb-16">
+            @Body
+        </article>
+    </main>
+</div>

@@ -1,0 +1,27 @@
+﻿@using ResumeApp.Layout.Front
+@inject IStringLocalizer<SharedResource> Loc
+@layout ProjectsLayout
+
+@attribute [Route(RouteConfig.PROJECTS)]
+
+<PageTitle>@Loc["Title_Projectss"]</PageTitle>
+
+<body>
+    <div class="grid-row-3 grid grid-cols-2 gap-x-12 px-6">
+        <ResumeApp.Pages.Components.CardDesign Title="PROK">
+
+        </ResumeApp.Pages.Components.CardDesign>
+
+        <ResumeApp.Pages.Components.CardDesign Title="SAFE">
+
+        </ResumeApp.Pages.Components.CardDesign>
+
+        <ResumeApp.Pages.Components.CardDesign Title="Project Look-A-Like">
+
+        </ResumeApp.Pages.Components.CardDesign>
+    </div>
+</body>
+
+@code {
+
+}

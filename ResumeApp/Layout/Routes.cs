@@ -41,14 +41,14 @@ namespace ResumeApp.Layout
                 MaterialIcon = "Account_Box",
                 SubPath = RouteConfig.CONTACT,
                 LocalizationNamePath = "NavLink_Contact",
-                IsPublished = true
+                IsPublished = false
             },
             new Route
             {
                 MaterialIcon = "Assignment",
                 SubPath = RouteConfig.RESUME,
                 LocalizationNamePath = "NavLink_Resume",
-                IsPublished = true
+                IsPublished = false
             },
             new Route
             {
@@ -98,6 +98,13 @@ namespace ResumeApp.Layout
                 SubPath = RouteConfig.RESUME,
                 LocalizationNamePath = "Header_Resume",
                 IsPublished = true
+            },
+            new Route
+            {
+                MaterialIcon = "Code",
+                SubPath = RouteConfig.PROJECTS,
+                LocalizationNamePath = "NavLink_Projects",
+                IsPublished = false,
             },
             new Route {
                 SubPath = RouteConfig.CONTACT,

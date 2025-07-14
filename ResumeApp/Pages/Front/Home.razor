@@ -1,5 +1,7 @@
-﻿@inject IStringLocalizer<SharedResource> Loc
+﻿@using ResumeApp.Layout.Front
+@inject IStringLocalizer<SharedResource> Loc
 @layout FrontPageLayout
+
 @attribute [Route(RouteConfig.HOME)]
 
 <PageTitle>@Loc["Title_Home"]</PageTitle>

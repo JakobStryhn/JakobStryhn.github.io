@@ -1,0 +1,40 @@
+﻿@inject IStringLocalizer<SharedResource> Loc
+@using Microsoft.Extensions.Localization
+@using ResumeApp.Pages.Components
+@attribute [Route(RouteConfig.PLAYGROUND)]
+
+<PageTitle>@Loc["Title_Playground"]</PageTitle>
+
+
+<CardDesign Title="@Loc["Playground_PrimaryCard_Title"]">
+    @* Subheader*@
+    <a class="border-b text-xl"> @Loc["Playground_PrimaryCard_Body"] </a>
+
+    <div class="grid grid-cols-3 grid-rows-3">
+        <div>
+            A
+        </div>
+        <div>
+            A
+        </div>
+
+        <div>
+            A
+        </div>
+
+        <div>
+            A
+        </div>
+
+        <div>
+            A
+        </div>
+        <div>
+            A
+        </div>
+
+    </div>
+</CardDesign>
+@code {
+
+}
