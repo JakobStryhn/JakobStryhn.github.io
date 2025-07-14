@@ -49,7 +49,7 @@
 }
 
 .animate-diagonal-move {
-    animation: diagonal-move 20s linear infinite
+    animation: diagonal-move 60s linear infinite
 }
 
 .animate-fade-in-down {

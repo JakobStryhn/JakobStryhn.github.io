@@ -2,11 +2,13 @@
 @using ResumeApp.Pages.Components
 @inherits LayoutComponentBase
 
-<div class="flex h-screen">
+<div class="bg-checkerboard-pattern animate-diagonal-move -z-100 flex h-screen min-h-screen bg-repeat">
+    <div class="absolute inset-0 z-10 bg-gray-900 opacity-55"></div>
+
     @* SideBar *@
-    <NavigationMenu />
+    <NavigationMenu/>
     @* Body*@
-    <div class="bg-diagonal-pattern animate-diagonal-move min-h-screen flex-1 overflow-auto bg-repeat py-6 pr-40 pl-80">
+    <div class="z-10 min-h-screen flex-1 overflow-auto py-6 pr-40 pl-80">
         @Body
     </div>
 </div>
