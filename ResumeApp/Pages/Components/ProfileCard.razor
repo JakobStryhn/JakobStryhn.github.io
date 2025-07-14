@@ -1,34 +1,33 @@
 ﻿@inject IJSRuntime JSRuntime
 
-<div class="animate-fade-in bg-white relative z-10 flex w-full transform flex-col rounded-xl p-8 opacity-80 shadow-2xl ease-in-out">
-
+<body class="animate-fade-in relative z-10 flex w-full transform flex-col rounded-xl bg-gray-100 p-8 shadow-2xl ease-in-out">
     <div class="mb-8 flex-shrink-0">
-        <img src="images/profile.jpeg" class="border-gray-600 h-40 w-40 rounded-full border-4 object-cover shadow-lg hover:scale-110 md:h-48 md:w-48">
+        <img src="images/profile.jpeg" class="h-40 w-40 rounded-full border-4 border-gray-600 object-cover shadow-lg hover:scale-110">
     </div>
 
-    <div class="text-center md:text-left">
-        <h1 class="text-gray-900 mb-4 text-4xl leading-tight font-extrabold">
+    <div class="text-left">
+        <h1 class="mb-4 text-4xl text-gray-900">
             Jakob Min Stryhn
         </h1>
-        <p class="text-blue-900 mb-6 text-xl font-semibold">
+        <p class="mb-6 text-xl font-semibold text-blue-900">
           
             Senior Software Engineer at Danish Safety Technology Authority
         </p>
-        <p class="text-md text-gray-700 mb-8 leading-relaxed">
+        <p class="text-md mb-8 leading-relaxed text-gray-700">
             I do code and stuff - DISCLAIMER: I am currently still working on this page
         </p>
         <div class="flex flex-wrap justify-start gap-4">
             @* Left Button*@
-            <button onclick="@DownloadResume" class="bg-indigo-600 text-white transform cursor-pointer rounded-lg px-6 py-3 font-semibold hover:bg-indigo-700">
+            <button onclick="@DownloadResume" class="transform cursor-pointer rounded-lg bg-indigo-600 px-6 py-3 font-semibold text-white hover:bg-indigo-700">
                 Get my resume
                 </button>
 
             @* Right Button*@
 
-            <a href="/resume" class="border-indigo-600 text-indigo-800 transform rounded-lg border px-6 py-3 font-semibold hover:bg-indigo-50">Check out the interactive resume</a>
+            <a href="/resume" class="transform rounded-lg border border-indigo-600 px-6 py-3 font-semibold text-indigo-800 hover:bg-indigo-50">Check out the interactive resume</a>
         </div>
     </div>
-</div>
+</body>
 @code {
 
     private async void DownloadResume()

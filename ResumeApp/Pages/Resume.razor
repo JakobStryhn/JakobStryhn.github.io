@@ -14,7 +14,7 @@
 @* Resume *@
 <body class="container mx-auto my-8 grid grid-cols-7 shadow-lg">
     @* Left Side*@
-    <div class="bg-gray-100 text-black col-span-4 p-6">
+    <div class="col-span-4 bg-gray-100 p-6 text-black">
         <section class="mb-6">
             <h2 class="mb-4 flex items-center text-xl font-semibold">
                 <span class="material-symbols-outlined">
@@ -41,21 +41,21 @@
                 <li class="mb-1 flex items-center justify-between">
                     <span> Danish</span>
                     <div class="flex space-x-1">
-                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
-                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
-                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
-                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
-                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
+                        <span class="h-3 w-3 rounded-full bg-gray-600"> </span>
+                        <span class="h-3 w-3 rounded-full bg-gray-600"> </span>
+                        <span class="h-3 w-3 rounded-full bg-gray-600"> </span>
+                        <span class="h-3 w-3 rounded-full bg-gray-600"> </span>
+                        <span class="h-3 w-3 rounded-full bg-gray-600"> </span>
                     </div>
                 </li>
                 <li class="flex items-center justify-between">
                     <span> English</span>
                     <div class="flex space-x-1">
-                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
-                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
-                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
-                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
-                        <span class="bg-gray-600 h-3 w-3 rounded-full"> </span>
+                        <span class="h-3 w-3 rounded-full bg-gray-600"> </span>
+                        <span class="h-3 w-3 rounded-full bg-gray-600"> </span>
+                        <span class="h-3 w-3 rounded-full bg-gray-600"> </span>
+                        <span class="h-3 w-3 rounded-full bg-gray-600"> </span>
+                        <span class="h-3 w-3 rounded-full bg-gray-600"> </span>
                     </div>
                 </li>
             </ul>
@@ -126,14 +126,14 @@
     </div>
 
     @* Right Side*@
-    <div class="bg-gray-300 text-black col-span-3 p-6">
-        <header class="border-gray-200 mb-6 flex flex-col items-center border-b pb-6">
+    <div class="col-span-3 bg-gray-300 p-6 text-black">
+        <header class="mb-6 flex flex-col items-center border-b border-gray-200 pb-6">
             <div class="text-center">
                 <h1 class="text-4xl font-bold"> Jakob Min Stryhn</h1>
-                <p class="text-xl"> Software Engineer</p>
+                <p class="text-xl"> Senior Software Engineer</p>
                 <div class="mb-4 flex justify-center">
                     <img src="images/profile.jpeg" alt="Jakob Min Stryhn"
-                         class="border-gray-300 w-46 mx-auto h-46 rounded-full border-4 object-cover hover:cursor-pointer @(isProfileSpinning ? "animate-spin" : "")"
+                         class="mx-auto h-46 w-46 rounded-full border-4 border-gray-300 object-cover hover:cursor-pointer @(isProfileSpinning ? "animate-spin" : "")"
                          onclick="@onProfileClick">
                 </div>
                 <div class="mt-4 mb-1 items-center justify-center md:justify-start">
@@ -186,7 +186,7 @@
         </header>
 
         <section class="mb-6">
-            <h2 class="border-gray-200 mb-4 flex items-center border-b pb-2 text-xl font-semibold">
+            <h2 class="mb-4 flex items-center border-b border-gray-200 pb-2 text-xl font-semibold">
                 <span class="material-symbols-outlined">
                     License
                 </span>

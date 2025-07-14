@@ -1,9 +1,11 @@
 ﻿@inject IStringLocalizer<SharedResource> Loc
 
-<div class="flex h-screen">
+<body class="z-20 flex h-screen opacity-95">
     <div class="fixed inset-y-0 left-0 z-40 flex w-64 flex-shrink-0 flex-col space-y-2 bg-gray-800 px-4 py-6 text-white shadow-lg transition-transform duration-300 ease-in-out">
         <div class="mb-6 px-2">
-            <h3 class="text-xl font-semibold text-gray-200">Playground</h3>
+            <a href="@RouteConfig.PLAYGROUND" class="hover:cursor-pointer"
+                <h3 class="text-xl font-semibold text-gray-200"> Playground</h3>
+            </a>
         </div>
 
         @* Navigation Links *@
@@ -17,4 +19,4 @@
             }
         }
     </div>
-</div>
+</body>
