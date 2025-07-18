@@ -1,6 +1,3 @@
-# DISCLAIMER 
-I AM NOT A GOOD FRONT END DESIGNER 
-
 ## What is this?
 Small home project with automatic deployment for GitHub 
 
