@@ -178,7 +178,7 @@
     <value>Get my resume</value>
   </data>
   <data name="ProfileCard_Button_InteractiveResume" xml:space="preserve">
-    <value>Try out my interactive resume</value>
+    <value>My online resume</value>
   </data>
   <data name="Header_Contact" xml:space="preserve">
     <value>Contact</value>
