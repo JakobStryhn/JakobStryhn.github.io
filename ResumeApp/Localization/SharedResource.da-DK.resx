@@ -207,4 +207,10 @@
   <data name="Playground_PrimaryCard_Body" xml:space="preserve">
     <value>Det her er den mindre seriøse del af hjemmesiden, hvor jeg vil tilføje ting lidt hist og her. </value>
   </data>
+  <data name="Title_Projects" xml:space="preserve">
+    <value>Projekter</value>
+  </data>
+  <data name="Title_About" xml:space="preserve">
+    <value>Om mig</value>
+  </data>
 </root>

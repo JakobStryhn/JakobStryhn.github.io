@@ -207,4 +207,10 @@
   <data name="Playground_PrimaryCard_Body" xml:space="preserve">
     <value>This is the less serious part of the website, where I will be putting up random stuff every once in a while</value>
   </data>
+  <data name="Title_Projects" xml:space="preserve">
+    <value>Projects</value>
+  </data>
+  <data name="Title_About" xml:space="preserve">
+    <value>About me</value>
+  </data>
 </root>

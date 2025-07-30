@@ -8,6 +8,7 @@ namespace ResumeApp.Layout
         public const string CONTACT = "/contact";
         public const string RESUME = "/resume";
         public const string PROJECTS = "/projects";
+        public const string ABOUT = "/About";
         public const string PLAYGROUND = "/playground";
         public const string TOYBOX = "/toybox";
         public const string COMPONENTS = "/components";
